@@ -23,3 +23,18 @@ Resources:
           Properties:
             Path: /
             Method: get
+  FindEntriesByUsername:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app/entries.findByUsername
+      Runtime: nodejs6.10
+      Role:
+        Fn::ImportValue:
+          !Join ['-', [!Ref 'ProjectId', !Ref 'AWS::Region', 'LambdaTrustRole']]
+      Events:
+        GetEvent:
+          Type: Api
+          Properties:
+            Path: /entries/username/{username}
+            Method: get
+    

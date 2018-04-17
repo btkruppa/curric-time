@@ -1,0 +1,13 @@
+{
+    "FindEntriesByUsername": {
+        "apigateway": {
+            "path": "/entries/username/blake",
+            "method": {
+                "value": "GET",
+                "items": [
+                    "GET"
+                ]
+            }
+        }
+    }
+}
