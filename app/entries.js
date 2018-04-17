@@ -26,8 +26,23 @@ exports.findByUsername = function(event, context, callback) {
     const result = {
         statusCode: 200,
         body: JSON.stringify(entries),
-        headers: {'content-type': 'text/html'}
+        headers: {'content-type': 'application/json'}
     };
     
     callback(null, result);
 };
+
+
+exports.save = function(event, context, callback) {
+    
+    
+    
+    const result = {
+        statusCode: 201,
+        body: JSON.stringify((event)),
+        headers: {
+            'content-type': 'application/json'
+        }
+    }
+    callback(null, result);
+}

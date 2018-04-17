@@ -8,6 +8,18 @@
                     "GET"
                 ]
             }
+        },
+        "lambda": {}
+    },
+    "SaveEntry": {
+        "apigateway": {
+            "path": "/entries",
+            "method": {
+                "value": "GET",
+                "items": [
+                    "GET"
+                ]
+            }
         }
     }
 }
